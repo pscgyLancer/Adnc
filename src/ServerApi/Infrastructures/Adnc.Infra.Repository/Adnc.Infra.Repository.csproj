@@ -2,19 +2,14 @@
 	<Import Project="..\..\build\common.props" />
 	<PropertyGroup>
 		<Nullable>enable</Nullable>
-		<DocumentationFile>.\Adnc.Infra.Repository.xml</DocumentationFile>
+		<GenerateDocumentationFile>True</GenerateDocumentationFile>
 	</PropertyGroup>
 	<ItemGroup>
-		<None Remove="Adnc.Infra.Repository.xml" />
+	  <Compile Remove="Entities\EfEnities\Extensions\**" />
+	  <EmbeddedResource Remove="Entities\EfEnities\Extensions\**" />
+	  <None Remove="Entities\EfEnities\Extensions\**" />
 	</ItemGroup>
 	<ItemGroup>
-		<EmbeddedResource Include="Adnc.Infra.Repository.xml">
-			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
-		</EmbeddedResource>
-	</ItemGroup>
-	<ItemGroup>
-		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.6" />
-		<PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="6.0.6" />
 		<PackageReference Include="MongoDB.Bson" Version="2.16.1" />
 		<PackageReference Include="MongoDB.Driver" Version="2.16.1" />
 	</ItemGroup>

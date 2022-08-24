@@ -27,6 +27,7 @@ CREATE TABLE `customer`  (
   `modifyby` bigint(20) NULL DEFAULT NULL,
   `modifytime` datetime(6) NULL DEFAULT NULL,
   `account` varchar(16) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `password` varchar(32) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `nickname` varchar(16) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `realname` varchar(16) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   PRIMARY KEY (`id`) USING BTREE
@@ -80,6 +81,7 @@ CREATE TABLE `eventtracker` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ROW_FORMAT=DYNAMIC COMMENT='事件跟踪/处理信息';
 
+CREATE UNIQUE INDEX UK_EventId_TrackerName ON EventTracker(EventId, TrackerName);
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
