@@ -10,7 +10,7 @@
 </a>
 </div>
 
-# <div align="center">![Adnc是一个微服务开发框架 代码改变世界 开源推动社区](https://aspdotnetcore.net/adnc-repository-open-graph/)</div>
+# <div align="center">![Adnc是一个微服务开发框架 代码改变世界 开源推动社区](https://aspdotnetcore.net/wp-content/uploads/2022/05/adnc-repository-open-graph-e1652098599436.png)</div>
 ## <div align="center">*代码改变世界，开源推动社区*</div>
 &ensp;&ensp;&ensp;&ensp;<a target="_blank" title="一个轻量级的.Net 5.0微服务开发框架" href="https://aspdotnetcore.net">Adnc</a>是一个轻量级的完全可以落地的微服务/分布式开发框架，同时也适用于单体架构系统的开发。支持经典三层与DDD架构开发模式、集成了一系列主流稳定的微服务配套技术栈。一个前后端分离的框架，前端基于<a target="_blank" href="https://github.com/vuejs/vue">Vue</a>、后端基于<a target="_blank" href="https://github.com/dotnet/core">.Net6</a>构建。WebApi遵循RESTful设计规范、基于JWT认证授权、基于<a target="_blank" href="https://github.com/mariadb-corporation/MaxScale">Maxscale</a>实现了读写分离、部署灵活、代码简洁、开箱即用、容器化微服务的最佳实践。
 
@@ -61,11 +61,11 @@
 
 ## 总体结构设计
 - 经典三层
-![.NET微服务开源框架-总体设计](https://aspdotnetcore.net/dotnet6/adnc-traditional/)
+![.NET微服务开源框架-总体设计](https://aspdotnetcore.net/wp-content/uploads/2021/11/adnc-traditional.png)
 - DDD三层
-![.NET微服务开源框架-总体设计](https://aspdotnetcore.net/adnc-ddd/)
+![.NET微服务开源框架-总体设计](https://aspdotnetcore.net/wp-content/uploads/2021/11/adnc-ddd.png)
 - 总体结构
-![.NET微服务开源框架-总体设计](https://aspdotnetcore.net/adnc-rpc-eventbus/)
+![.NET微服务开源框架-总体设计](https://aspdotnetcore.net/wp-content/uploads/2021/11/adnc-rpc-eventbus.png)
 
 ## 代码片段
 
@@ -111,14 +111,12 @@ internal static class Program
 
 ## Jmeter测试
 
-- ECS服务器配置：4核8G，带宽1M。服务器上装了很多东西，剩余大约50%的CPU资源，50%的内存资源。
-- 由于带宽有限，吞吐率约200/s左右。
+- ECS服务器配置：4核8G，带宽8M。服务器上装了很多东西，剩余大约50%的CPU资源，50%的内存资源。
+- 因为服务器带宽限制，吞吐率约1000/s左右。
 - 模拟并发线程1200/s
 - 读写比率7:3
 
 > 6个测试用例覆盖了网关、服务发现、配置中心、服务间同步调用、数据库CURD、本地事务、分布式事务、缓存、布隆过滤器、SkyApm链路、Nlog日志记录、操作日志记录。
-
-![.NET微服务开源框架-Jmeter](https://aspdotnetcore.net/jmeter_result/)
 
 ## 演示
 - <a href="http://adnc.aspdotnetcore.net" target="_blank">http://adnc.aspdotnetcore.net</a>
@@ -150,8 +148,8 @@ internal static class Program
     npm run build:prod
     ```
   - 界面
-![.NET微服务开源框架-异常日志界面](https://aspdotnetcore.net/adnc-dashboard-nlog-2/)
-![.NET微服务开源框架-角色管理界面](https://aspdotnetcore.net/adnc-dashboard-role/)
+![.NET微服务开源框架-异常日志界面](https://aspdotnetcore.net/wp-content/uploads/2021/11/adnc-dashboard-nlog.png)
+![.NET微服务开源框架-角色管理界面](https://aspdotnetcore.net/wp-content/uploads/2021/11/adnc-dashboard-role.png)
 
 #### ServerApi
   - ServerApi基于`.NET 5.0`搭建。
@@ -188,7 +186,7 @@ internal static class Program
 - `Services` 微服务相关工程
 - `Tests` 框架测试相关工程
 
-![.NET微服务开源框架-整体架构图](https://aspdotnetcore.net/dotnet6/adnc_solution)
+![.NET微服务开源框架-整体架构图](https://aspdotnetcore.net/wp-content/uploads/2021/11/adnc_solution.jpg)
 
 ### Gateways网关相关工程
 
