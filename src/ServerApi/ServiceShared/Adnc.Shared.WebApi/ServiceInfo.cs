@@ -9,6 +9,7 @@ public class ServiceInfo : IServiceInfo
     public string ServiceName { get; private set; } = string.Empty;
     public string CorsPolicy { get; set; } = string.Empty;
     public string ShortName { get; private set; } = string.Empty;
+    public string RelativeRootPath { get; private set; } = string.Empty;
     public string Version { get; private set; } = string.Empty;
     public string Description { get; private set; } = string.Empty;
     public Assembly StartAssembly { get; private set; } = default!;
@@ -48,11 +49,13 @@ public class ServiceInfo : IServiceInfo
                 _ => throw new NullReferenceException("ASPNETCORE_ENVIRONMENT")
             };
 
+            var names = fullName.Split(".");
             _instance = new ServiceInfo
             {
                 Id = serviceId,
                 ServiceName = serviceName,
-                ShortName = fullName.Split(".")[^2],
+                ShortName = $"{names[^2]}-{names[^1]}",
+                RelativeRootPath = $"{names[^2]}/{names[^1]}",
                 CorsPolicy = "default",
                 StartAssembly = startAssembly,
                 Description = description,
